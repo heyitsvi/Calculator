@@ -25,6 +25,9 @@ body{
     color: white;
     cursor: pointer;
 }
+.button:hover {
+    background-color: rgb(255, 77, 77);
+}
 #container{
     display: grid;
     background-color: white;
@@ -55,25 +58,32 @@ body{
     /* justify-content: flex-end; */
     flex-direction: row;
     font-size: 50px;
-    white-space: nowrap;
-    grid-template-rows: 1fr;
-    grid-template-areas:"current";
+    /* white-space: nowrap; */
+    max-width: 100%;
+    grid-template-rows: min(120px,auto) 1fr;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
+#display > .prev-op{
+    grid-area: prev;
+    justify-self: right;
+    align-self: center;
+    font-size: 40px;
+    color: rgb(93, 90, 90);
+}
 
 #display > .current-op{
     grid-area: current;
-    align-self: center;
     justify-self: right;
 }
-
-
 
 
 #mod, #ac, #divide, #multiply, #subtract, #add, #equals{
     background: rgb(90, 255, 211);
     color: white;
 }
+
 #ac{
     grid-area: ac;
 }
@@ -81,4 +91,5 @@ body{
 #zero{
     grid-area: zero;
 }
+
 
