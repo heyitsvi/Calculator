@@ -1,0 +1,84 @@
+h1{
+    display: grid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    justify-content: center;
+    border-color: black;
+    border-style:solid;
+    border-width:8px;
+    height: fit-content;
+    width: 0.5fr;
+    max-height: inherit;
+    max-width: inherit;
+    background: white;
+    white-space: nowrap;
+}
+body{
+    background: rgb(255, 77, 77);
+}
+.button{
+    font-size: 30px;
+    font-weight: 500;
+    background: rgb(255, 116, 91);
+    border-radius: 5px;
+    box-shadow: black;
+    color: white;
+    cursor: pointer;
+}
+#container{
+    display: grid;
+    background-color: white;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(4,1fr);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 450px;
+    height: 600px;
+    border:solid;
+    border-width: 8px;
+    border-radius: 15px;
+    justify-content: center;
+    align-content: center;
+    margin:auto;
+    grid-template-areas:"a a a a"
+                        "ac ac mod div"
+                        "seven eight nine mul"
+                        "four five six sub"
+                        "one two three add"
+                        "zero zero decimal equal" 
+    ;
+}
+#display{
+    display: grid;
+    grid-area: a;
+    background: whtie;
+    align-content: center;
+    /* justify-content: flex-end; */
+    flex-direction: row;
+    font-size: 50px;
+    white-space: nowrap;
+    grid-template-rows: 1fr;
+    grid-template-areas:"current";
+}
+
+
+#display > .current-op{
+    grid-area: current;
+    align-self: center;
+    justify-self: right;
+}
+
+
+
+
+#mod, #ac, #divide, #multiply, #subtract, #add, #equals{
+    background: rgb(90, 255, 211);
+    color: white;
+}
+#ac{
+    grid-area: ac;
+}
+ 
+#zero{
+    grid-area: zero;
+}
+
